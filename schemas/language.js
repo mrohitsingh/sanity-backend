@@ -1,19 +1,14 @@
-import {MdPerson} from 'react-icons/md'
+import {RiCodeBoxFill} from 'react-icons/ri'
 export default {
-  name: 'author',
+  name: 'language',
   type: 'document',
-  title: 'Author',
-  icon: MdPerson,
+  title: 'Language',
+  icon: RiCodeBoxFill,
   fields: [
     {
       name: 'title',
       type: 'string',
       title: 'Title',
-    },
-    {
-      name: 'about',
-      type: 'string',
-      title: 'About',
     },
     {
       name: 'image',

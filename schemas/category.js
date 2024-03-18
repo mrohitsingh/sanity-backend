@@ -1,19 +1,30 @@
-import {defineField, defineType} from 'sanity'
-
-export default defineType({
+import {MdCategory} from 'react-icons/md'
+export default {
   name: 'category',
   title: 'Category',
   type: 'document',
+  icon: MdCategory,
   fields: [
-    defineField({
+    {
       name: 'title',
-      title: 'Title',
+      title: 'Name',
       type: 'string',
-    }),
-    defineField({
+    },
+
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
-    }),
+    },
   ],
-})
+}

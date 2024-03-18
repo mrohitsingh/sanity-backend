@@ -1,19 +1,14 @@
-import {MdPerson} from 'react-icons/md'
+import {RiProjectorFill} from 'react-icons/ri'
 export default {
-  name: 'author',
+  name: 'portfolio',
   type: 'document',
-  title: 'Author',
-  icon: MdPerson,
+  title: 'Portfolio',
+  icon: RiProjectorFill,
   fields: [
     {
       name: 'title',
       type: 'string',
       title: 'Title',
-    },
-    {
-      name: 'about',
-      type: 'string',
-      title: 'About',
     },
     {
       name: 'image',
